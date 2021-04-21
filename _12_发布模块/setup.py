@@ -1,4 +1,5 @@
 from distutils.core import setup
+
 setup(name="message",
       version="1.0",
       description="发送接收消息",
