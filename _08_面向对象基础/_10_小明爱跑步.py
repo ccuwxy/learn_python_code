@@ -10,7 +10,7 @@ class Person:
         self.weight += 1
 
     def run(self):
-        self.weight -= 0.7
+        self.weight -= 0.5
 
 
 xiaoming = Person("小明", 75.0)
