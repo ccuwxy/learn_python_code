@@ -4,8 +4,8 @@ pygame.init()
 
 screen = pygame.display.set_mode((480, 700))
 
-background = pygame.image.load("./images/background.png")
-hero = pygame.image.load("./images/me1.png")
+background = pygame.image.load("python入门/飞机大战/images/background.png")
+hero = pygame.image.load("python入门/飞机大战/images/me1.png")
 screen.blit(background, (0, 0))
 # screen.blit(hero, (200, 500))
 
@@ -17,9 +17,11 @@ clock = pygame.time.Clock()
 while True:
     clock.tick(120)
 
-    event_list = pygame.event.get()
-    if len(event_list) > 0:
-        print(event_list)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            print("退出游戏")
+            pygame.quit()
+            exit()
 
     if hero_rect.y <= -126:
         hero_rect.y = 700
