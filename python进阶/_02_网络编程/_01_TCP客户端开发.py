@@ -16,6 +16,6 @@ tcp_client_socket.send("123".encode("utf-8"))
 # 传输数据
 # 参数：以字节为单位的接收数据的大小
 recv_data = tcp_client_socket.recv(1024)
-print(recv_data.decode("utf-8"))
+print("收到服务端数据：", recv_data.decode("utf-8"))
 # 关闭客户端套接字
 tcp_client_socket.close()
